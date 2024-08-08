@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { RiSearchEyeLine } from "react-icons/ri";
 
+
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -10,7 +11,7 @@ const Navbar = () => {
 
   return (
     <>
-      <div className="h-24 shadow-xl p-1 flex justify-evenly items-center">
+      <div className="h-24 fixed z-50 shadow-xl p-1 flex gap-32 bg-white w-screen center">
         <div className="flex items-center space-x-4">
           <img 
             src="https://logomaker.designfreelogoonline.com/media/productdesigner/logo/resized/000751_online_worldwide_e-commerce_logo_design-01.png" 
@@ -24,7 +25,7 @@ const Navbar = () => {
 
         <div className="hidden md:flex items-center space-x-8">
           <ul className='text-xl font-semibold flex space-x-4'>
-            <li className='cursor-pointer hover:text-gray-800 '>Home</li>
+          <li className='cursor-pointer hover:text-gray-800 '>Home</li>
             <li className='cursor-pointer hover:text-gray-800 '>About</li>
             <li className='cursor-pointer hover:text-gray-800 '>Products</li>
             <li className='cursor-pointer hover:text-gray-800 '>Contact</li>
@@ -37,10 +38,10 @@ const Navbar = () => {
         <div className=" md:flex center h-full w-[30%] relative">
           <input 
             type="text" 
-            className="outline-none border-2 border-blue-800 w-full h-[60%] rounded-md text-xl px-4 bg-black text-white opacity-75" 
-            placeholder='Search...' 
+            className="outline-none  w-full h-[60%] rounded-md text-xl px-4 bg-blue-100 text-white opacity-75" 
+            placeholder='Search for Products , Brands and More ' 
           />
-          <RiSearchEyeLine className='absolute right-4 text-2xl text-white' />
+          <RiSearchEyeLine className='absolute right-4 text-2xl ' />
         </div>
 
         <div className="md:hidden flex items-center">
